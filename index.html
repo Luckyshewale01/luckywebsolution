@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<title>WebDeveloper | Website Design & Orders</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>WebDeveloper</h1>
+  <p>Professional Website Design & Development</p>
+</header>
+
+<nav>
+  <a href="#services">Services</a>
+  <a href="#order">Order</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h2>Do you want to create your own website?</h2>
+  <p>Business • Personal • Online Store • Portfolio</p>
+  <a href="#order" class="btn">Order Now</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="cards">
+
+    <div class="demo-card">
+      <span>Business Website</span>
+      <button class="demo-inside-btn" onclick="openBusinessPage()">View </button>
+    </div>
+
+    <div class="demo-card">
+      <span>E-Commerce Website</span>
+      <button class="demo-inside-btn" onclick="openEcommercePage()">View </button>
+    </div>
+
+    <div class="card">Website Maintenance</div>
+
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+  <h2>Tap To View</h2>
+
+  <div class="demo-card">
+    <span>Personal Portfolio</span>
+    <button class="demo-inside-btn" onclick="openPortfolioPage()">View Portfolio</button>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+  <h2>Place Your Order</h2>
+  <form onsubmit="sendOrder(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="mobile" placeholder="Mobile Number" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <select id="type">
+      <option>Business Website</option>
+      <option>E-Commerce Website</option>
+      <option>Personal Website</option>
+      <option>Other</option>
+
+    </select>
+
+    <textarea id="message" placeholder="Website details"></textarea>
+    <button type="submit">Send Order</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📞 WhatsApp:If you have any inquiries, please feel free to email me. I will respond as soon as possible</p>
+  <p>📧 Email: luckydshewale@email.com</p>
+
+</section>
+
+<footer>
+  <p>© 2026 WebDeveloper | All Rights Reserved</p>
+  <p class="credit"> <p> Developed by Lucky</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("vo0AW4L1T2HcQBtuT");
+})();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
